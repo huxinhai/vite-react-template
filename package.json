@@ -38,7 +38,6 @@
     "unplugin-auto-import": "^19.1.1",
     "vite": "^6.3.1",
     "vite-plugin-html": "^3.2.2",
-    "vite-plugin-pages": "^0.32.5",
     "vite-plugin-typed-css-modules": "^0.3.0"
   }
 }
