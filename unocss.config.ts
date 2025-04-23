@@ -7,30 +7,13 @@
  *
  */
 
-// import { presetWind3 } from '@unocss/preset-wind3'
+import { presetWind3 } from '@unocss/preset-wind3'
 import { defineConfig, presetAttributify } from 'unocss'
+import presetRemToPx from '@unocss/preset-rem-to-px'
 // import transformerDirectives from '@unocss/transformer-directives'
 // import transformerDirectives from '@unocss/transformer-directives'
 
 export default defineConfig({
-  presets: [presetAttributify()],
-  rules:[
-    [/^text-(\d+)$/, ([, d]) => ({ 'font-size': `${d}px` })],
-    [/^w-(\d+)$/, ([, d]) => ({ width: `${d}px` })],
-    [/^h-(\d+)$/, ([, d]) => ({ height: `${d}px` })],
-    [/^p-(\d+)$/, ([, d]) => ({ padding: `${d}px` })],
-    [/^m-(\d+)$/, ([, d]) => ({ margin: `${d}px` })],
-    [/^leading-(\d+)$/, ([, d]) => ({ 'line-height': `${d}px` })],
-    [/^rounded-(\d+)$/, ([, d]) => ({ 'border-radius': `${d}px` })],
-    [/^max-w-(\d+)$/, ([, d]) => ({ 'max-width': `${d}px` })],
-    [/^min-w-(\d+)$/, ([, d]) => ({ 'min-width': `${d}px` })],
-    [/^max-h-(\d+)$/, ([, d]) => ({ 'max-height': `${d}px` })],
-    [/^min-h-(\d+)$/, ([, d]) => ({ 'min-height': `${d}px` })],
-    [/^top-(\d+)$/, ([, d]) => ({ top: `${d}px` })],
-    [/^left-(\d+)$/, ([, d]) => ({ left: `${d}px` })],
-    [/^right-(\d+)$/, ([, d]) => ({ right: `${d}px` })],
-    [/^bottom-(\d+)$/, ([, d]) => ({ bottom: `${d}px` })],
-    [/^gap-(\d+)$/, ([, d]) => ({ gap: `${d}px` })]
-  ]
+  presets: [presetAttributify(),presetWind3(),presetRemToPx({ baseFontSize: 4})]
   // transformers: [transformerDirectives()]
 })

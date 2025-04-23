@@ -6,6 +6,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import { defineConfig } from 'vite'
 import { createHtmlPlugin } from 'vite-plugin-html'
 import typedCssModulesPlugin from 'vite-plugin-typed-css-modules'
+import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin'
 
 // https://vite.dev/config/
 export default defineConfig((configEnv) => {
@@ -28,7 +29,8 @@ export default defineConfig((configEnv) => {
         minify: !0
       }),
       typedCssModulesPlugin(),
-      TanStackRouterVite({ target: 'react', autoCodeSplitting: !0 })
+      TanStackRouterVite({ target: 'react', autoCodeSplitting: !0 }),
+      vanillaExtractPlugin()
     ],
     resolve: {
       alias: {
