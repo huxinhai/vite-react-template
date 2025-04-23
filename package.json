@@ -6,10 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
     "preview": "vite preview",
     "prebuild": "ts-node generateVersion.ts",
-    "postinstall": "pnpm update web-utils"
+    "refresh:web-utils": "pnpm remove web-utils && pnpm add web-utils@git+https://github.com/massaifac/web-utils.git",
+    "format": "biome format --write",
+    "check": "biome check --write"
   },
   "dependencies": {
     "@tanstack/react-router": "^1.116.0",
@@ -19,7 +20,8 @@
     "mobx-react-lite": "^4.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "web-utils": "npm:musical-giggle@^1.1.1"
+    "react-helmet-async": "^2.0.5",
+    "web-utils": "git+https://github.com/massaifac/web-utils.git"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",

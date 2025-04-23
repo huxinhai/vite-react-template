@@ -26,3 +26,5 @@ dist-ssr
 # 忽略 pnpm 自动生成的文件
 pnpm-lock.yaml
 pnpm-workspace.yaml
+
+src/auto-imports.d.ts

@@ -13,6 +13,6 @@ import { defineConfig, presetAttributify } from 'unocss'
 // import transformerDirectives from '@unocss/transformer-directives'
 
 export default defineConfig({
-    presets: [presetAttributify()],
-    // transformers: [transformerDirectives()]
+  presets: [presetAttributify()]
+  // transformers: [transformerDirectives()]
 })
