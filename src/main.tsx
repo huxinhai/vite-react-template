@@ -4,6 +4,7 @@ import './index.css'
 import App from './App.tsx'
 import { RootStore } from './store/rootStore'
 import { StoreProvider } from './store/storeContext'
+import 'uno.css'
 
 const rootStore = new RootStore()
 
