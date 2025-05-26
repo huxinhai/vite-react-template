@@ -26,7 +26,17 @@ export default defineConfig((configEnv) => {
         mode: 'global'
       }),
       createHtmlPlugin({
-        minify: !0
+        minify: {
+          collapseWhitespace: !0,
+          removeComments: !0,
+          removeRedundantAttributes: !0,
+          removeScriptTypeAttributes: !0,
+          removeStyleLinkTypeAttributes: !0,
+          useShortDoctype: !0,
+          minifyJS: !0,
+          minifyCSS: !0,
+          keepClosingSlash: !0
+        }
       }),
       typedCssModulesPlugin(),
       TanStackRouterVite({ target: 'react', autoCodeSplitting: !0 }),
